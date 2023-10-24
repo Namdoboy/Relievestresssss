@@ -1,0 +1,152 @@
+ /* 초기 텍스트 스타일 설정 */
+ @font-face {
+    font-family: 'Charley';
+    /* Define the name for your font family */
+    src: url('Charley.woff') format('woff');
+    /* Provide the path to your font file and specify the format */
+    font-weight: normal;
+    /* Define the font weight (e.g., normal, bold) */
+    font-style: normal;
+    /* Define the font style (e.g., italic) */
+}
+
+
+/* 제목 스타일 */
+h1 {
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: Charley;
+    /* "Oswald" 폰트를 사용하고, 대체 폰트로 sans-s
+font-size: 36px; /* 원하는 폰트 크기로 변경 */
+    color: #00c7c1;
+    /* 원하는 폰트 색상으로 변경 */
+    /* 다른 스타일 속성 추가 */
+}
+
+
+ #text {
+    font-size: 24px;
+    transition: font-size 0.5s ease, color 0.5s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* 애니메이션 키프레임 설정 */
+@keyframes circleEffect {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 바로가기 아이콘 스타일 설정 */
+.shortcut {
+    margin: 20px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 떠다니는 텍스트 스타일 설정 */
+.floating-text {
+    position: absolute;
+    animation: floatText 5s linear infinite;
+}
+
+@keyframes floatText {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 게이지 스타일 설정 */
+.gauge {
+    width: 0;
+    height: 20px;
+    background-color: #ed1fd2;
+    transition: width 0.5s;
+}
+
+/* 추가된 이미지 스타일 설정 */
+.floating-image {
+    position: absolute;
+    animation: circleEffect 1s ease-out;
+}
+
+
+/* 아이콘 스타일 */
+.shortcut i {
+    font-size: 20px;
+    /* 아이콘 크기 조절 */
+    color: rgb(170, 255, 0);
+    /* 원하는 아이콘 색상으로 변경 */
+    margin-right: 5px;
+    /* 아이콘과 텍스트 간격 설정 */
+}
+
+/* 다양한 아이콘 클래스를 사용하여 각 버튼에 아이콘을 지정 */
+.icon-instagram::before {
+    content: "\f16d";
+    /* Instagram 아이콘 코드 */
+    font-family: FontAwesome;
+    /* 원하는 아이콘 폰트 패밀리 사용 */
+}
+
+.icon-website::before {
+    content: "\f0ac";
+    /* Website 아이콘 코드 */
+    font-family: FontAwesome;
+    /* 원하는 아이콘 폰트 패밀리 사용 */
+}
+
+.icon-linkedin::before {
+    content: "\f08c";
+    /* Linkedin 아이콘 코드 */
+    font-family: FontAwesome;
+    /* 원하는 아이콘 폰트 패밀리 사용 */
+}
+
+
+ /* 텍스트 폭발 애니메이션 */
+ @keyframes explodeText {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 이미지 폭발 애니메이션 */
+@keyframes explodeImage {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
