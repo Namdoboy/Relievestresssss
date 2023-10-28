@@ -153,7 +153,7 @@ async function main() {
 
     // 무작위 이미지 생성 및 애니메이션 함수
     function createRandomImage() {
-        var imageElement = document.createElement('img');
+        var imageElement = document.createElement('png');
         imageElement.src = '/Users/jangminseog/Desktop/untitled folder 24/untitled folder/장민석_로고777 copy.png'; // 이미지 파일의 경로를 입력하세요
         imageElement.className = 'floating-image';
         var randomSize = getRandomSize();
